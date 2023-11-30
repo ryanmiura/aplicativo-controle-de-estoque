@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "905655696107",
+    "project_id": "controledeestoque01-c4a45",
+    "storage_bucket": "controledeestoque01-c4a45.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:905655696107:android:9d0ed839dabde85a3fdcae",
+        "android_client_info": {
+          "package_name": "com.example.controle_de_estoque"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBippPR4M8k1_5eyGMwohaiYac78yEsMZs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
