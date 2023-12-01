@@ -7,7 +7,7 @@ import 'firebase_options.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -26,3 +26,5 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+//https://png.pngtree.com/png-clipart/20210520/ourlarge/pngtree-square-carton-packaging-milk-png-image_3287338.jpg

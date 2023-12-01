@@ -26,7 +26,7 @@ class _ItemCardState extends State<ItemCard> {
       padding: const EdgeInsets.all(8.0),
       child: Container(
         decoration: BoxDecoration(
-          color: Colors.green,
+          color: Colors.grey[400],
           borderRadius: BorderRadius.circular(20),
         ),
         width: 400,
@@ -49,15 +49,15 @@ class _ItemCardState extends State<ItemCard> {
           Text("Quantidade : ${widget.quantidade}"),
           IconButton(
               onPressed: () async {
-                print('Catapimbas:  ${widget.id}');
                 await FirebaseFirestore.instance
                     .collection('Itens')
                     .doc(widget.id)
                     .delete();
               },
-              icon: const Icon(Icons.delete))
+              icon: const Icon(Icons.delete)),
         ]),
       ),
     );
   }
 }
+//https://static.wixstatic.com/media/11d2b8_b742b4f1519f476cbeb72e4288fd0b97~mv2.png/v1/fill/w_479,h_316,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/11d2b8_b742b4f1519f476cbeb72e4288fd0b97~mv2.png

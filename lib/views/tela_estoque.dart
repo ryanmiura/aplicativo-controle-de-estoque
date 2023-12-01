@@ -1,41 +1,3 @@
-// import 'package:controle_de_estoque/DAO/item_inherited.dart';
-// import 'package:controle_de_estoque/componentes/item_card.dart';
-// import 'package:controle_de_estoque/models/item.dart';
-// import 'package:controle_de_estoque/views/tela_add_item.dart';
-// import 'package:flutter/material.dart';
-
-// class TelaEstoque extends StatefulWidget {
-//   const TelaEstoque({super.key});
-
-//   @override
-//   State<TelaEstoque> createState() => _TelaEstoqueState();
-// }
-
-// class _TelaEstoqueState extends State<TelaEstoque> {
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       appBar: AppBar(
-//         title: const Text('Estoque'),
-//       ),
-//       body: ListView(
-//         children: ItemInherited.of(context).listaItens,
-//       ),
-//       floatingActionButton: FloatingActionButton(
-//         onPressed: () {
-//           Navigator.push(
-//               context,
-//               MaterialPageRoute(
-//                   builder: (contextNew) => TelaAddItem(
-//                         itemContext: context,
-//                       )));
-//         },
-//         child: const Icon(Icons.add),
-//       ),
-//     );
-//   }
-// }
-
 import 'package:controle_de_estoque/componentes/item_card.dart';
 import 'package:controle_de_estoque/views/tela_add_item.dart';
 import 'package:flutter/material.dart';
@@ -52,7 +14,7 @@ class TelaEstoqueState extends State<TelaEstoque> {
     FirebaseFirestore.instance;
     return Scaffold(
       appBar: AppBar(
-        title: Text('Estoque'),
+        title: const Text('Estoque'),
       ),
       body: StreamBuilder<QuerySnapshot>(
         stream: FirebaseFirestore.instance.collection('Itens').snapshots(),
@@ -65,11 +27,6 @@ class TelaEstoqueState extends State<TelaEstoque> {
                 itemBuilder: (context, index) {
                   DocumentSnapshot document =
                       snapshot.data?.docs[index] as DocumentSnapshot<Object?>;
-                  // Use os dados do documento para exibir na interface do usuário
-                  // return ListTile(
-                  //   title: Text(document['nome']),
-                  //   subtitle: Text(document['quantidade'].toString()),
-                  // );
                   return ItemCard(
                       id: document.id,
                       nome: document['nome'],
