@@ -2,12 +2,20 @@ import 'package:controle_de_estoque/DAO/item_inherited.dart';
 import 'package:controle_de_estoque/views/tela_estoque.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'firebase_options.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+  await initializeFirebase();
   runApp(const MyApp());
+}
+
+Future<void> initializeFirebase() async {
+  try {
+    await Firebase.initializeApp();
+    print('Firebase initialized successfully');
+  } catch (e) {
+    print('Failed to initialize Firebase: $e');
+  }
 }
 
 class MyApp extends StatelessWidget {
@@ -16,7 +24,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Controle de Estoque',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(
             seedColor: const Color.fromARGB(255, 63, 27, 126)),
@@ -26,5 +34,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
-//https://png.pngtree.com/png-clipart/20210520/ourlarge/pngtree-square-carton-packaging-milk-png-image_3287338.jpg

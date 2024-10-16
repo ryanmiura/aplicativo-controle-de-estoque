@@ -136,12 +136,9 @@ class _TelaAddItemState extends State<TelaAddItem> {
                     },
                     child: Text("Adicionar"),
                     style: ElevatedButton.styleFrom(
-                      textStyle:
-                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                      foregroundColor: Colors.white, backgroundColor: const Color.fromARGB(255, 106, 240, 111), textStyle:
+                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold), disabledForegroundColor: Colors.blue.withOpacity(0.38), disabledBackgroundColor: Colors.blue.withOpacity(0.12),
                       minimumSize: Size(350, 50),
-                      primary: const Color.fromARGB(255, 106, 240, 111),
-                      onPrimary: Colors.white,
-                      onSurface: Colors.blue,
                       shadowColor: Colors.grey,
                       elevation: 5,
                       side: BorderSide(
